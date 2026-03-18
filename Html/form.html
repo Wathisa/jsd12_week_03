@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matcha Mood Café Order</title>
+<!--CSS-->
+  <style>
+    body {
+      background-color: #0f1a1a;
+      color: #ecebeb;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      width: 60%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #132222;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }   
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #2c3e3e;
+      background-color: #0f1a1a;
+      color: white;
+    }
+
+    button {
+      background-color: #5f8f6f;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4c755b;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .option {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    .option input {
+      margin-right: 8px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+    <h1>🍵 Matcha Mood Café Order</h1>
+
+<form>
+
+  <!-- ชื่อลูกค้า -->
+  <div class="form-group">
+    <label>ชื่อลูกค้า:</label>
+    <input type="text" placeholder="กรอกชื่อของคุณ">
+  </div>
+
+  <!-- เครื่องดื่ม -->
+  <div class="form-group">
+    <label>เลือกเครื่องดื่ม:</label>
+
+    <label class="option">
+      <input type="radio" name="drink"> Premium Matcha Latte
+    </label>
+
+    <label class="option">
+      <input type="radio" name="drink"> Matcha Espresso
+    </label>
+
+    <label class="option">
+      <input type="radio" name="drink"> Pure Matcha
+    </label>
+
+    <label class="option">
+      <input type="radio" name="drink"> Strawberry Matcha Latte
+    </label>
+  </div>
+
+  <!-- ความหวาน -->
+  <div class="form-group">
+    <label>ระดับความหวาน:</label>
+    <select>
+      <option>ไม่หวาน 0%</option>
+      <option>หวานน้อย 25%</option>
+      <option>หวานปกติ 50%</option>
+      <option>หวานมาก 100%</option>
+    </select>
+  </div>
+
+  <!-- topping -->
+  <div class="form-group">
+    <label>เพิ่มท็อปปิ้ง:</label>
+
+    <label class="option">
+      <input type="checkbox"> ไข่มุก
+    </label>
+
+    <label class="option">
+      <input type="checkbox"> วิปครีม
+    </label>
+
+    <label class="option">
+      <input type="checkbox"> ช็อกโกแลต
+    </label>
+  </div>
+
+  <!-- ขนม -->
+  <div class="form-group">
+    <label>เลือกขนม:</label>
+
+    <label class="option">
+      <input type="radio" name="dessert"> Matcha Cake
+    </label>
+
+    <label class="option">
+      <input type="radio" name="dessert"> Matcha Cheesecake
+    </label>
+
+    <label class="option">
+      <input type="radio" name="dessert"> Croissant
+    </label>
+
+    <label class="option">
+      <input type="radio" name="dessert"> ไม่รับ
+    </label>
+  </div>
+
+  <!-- ประเภท -->
+  <div class="form-group">
+    <label>ประเภทการรับสินค้า:</label>
+
+    <label class="option">
+      <input type="radio" name="type"> ทานที่ร้าน
+    </label>
+
+    <label class="option">
+      <input type="radio" name="type"> กลับบ้าน
+    </label>
+  </div>
+
+  <!-- การจ่ายเงิน -->
+  <div class="form-group">
+    <label>วิธีชำระเงิน:</label>
+
+    <label class="option">
+      <input type="radio" name="payment"> เงินสด
+    </label>
+
+    <label class="option">
+      <input type="radio" name="payment"> โอนเงิน
+    </label>
+
+    <label class="option">
+      <input type="radio" name="payment"> บัตรเครดิต
+    </label>
+  </div>
+
+  <!-- หมายเหตุ -->
+  <div class="form-group">
+    <label>หมายเหตุเพิ่มเติม:</label>
+    <textarea rows="3"></textarea>
+  </div>
+
+  <!-- ปุ่ม -->
+  <button type="submit">สั่งเลย 🍵</button>
+
+</form>
+
+</body>
+</html>
