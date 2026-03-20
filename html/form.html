@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matcha Mood Café Order</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #0f1a1a;
+        color: #ecebeb;
+        font-family: Arial, sans-serif;
+      }
+
+      /* หัวข้อ */
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* กล่อง */
+      .form-container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      /* grid */
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+
+      /* column */
+      .column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      /* กล่องย่อย */
+      .form-group {
+        background-color: #132222;
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      /* เต็มแถว */
+      .full {
+        margin-top: 20px;
+      }
+
+      /* label */
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      /* option */
+      .option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 8px;
+        cursor: pointer;
+      }
+
+      /* input */
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid #2c3e3e;
+        background-color: #0f1a1a;
+        color: white;
+      }
+
+      /* ปุ่ม */
+      button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 12px;
+        background-color: #5f8f6f;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #4c755b;
+      }
+
+      /* responsive */
+      @media (max-width: 768px) {
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .menu-img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>🍵 Matcha Mood Café Order</h1>
+
+    <div class="form-container">
+      <form>
+        <div class="form-grid">
+          <!-- 🔵 ซ้าย -->
+          <div class="column">
+            <div class="form-group">
+              <label>ชื่อลูกค้า:</label>
+              <input type="text" placeholder="กรอกชื่อของคุณ" />
+            </div>
+
+            <div class="form-group">
+              <label>เลือกเครื่องดื่ม:</label>
+
+              <label class="option">
+                <input type="radio" name="drink" />
+                <img src="images/matcha-latte.png" class="menu-img" />
+                Premium Matcha Latte</label
+              >
+              <label class="option">
+                <input type="radio" name="drink" />
+                <img src="images/matcha_espresso.png" class="menu-img" />
+                Matcha Espresso</label
+              >
+
+              <label class="option">
+                <input type="radio" name="drink" />
+                <img src="images/pure_matcha.png" class="menu-img" />
+                Pure Matcha</label
+              >
+
+              <label class="option">
+                <input type="radio" name="drink" />
+                <img src="images/strawberry-matcha.png" class="menu-img" />
+                Strawberry Matcha Latte</label
+              >
+            </div>
+
+            <div class="form-group">
+              <label>ระดับความหวาน:</label>
+              <select>
+                <option>ไม่หวาน 0%</option>
+                <option>หวานน้อย 25%</option>
+                <option>หวานปกติ 50%</option>
+                <option>หวานมาก 100%</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- 🟢 ขวา -->
+          <div class="column">
+            <div class="form-group">
+              <label>เพิ่มท็อปปิ้ง:</label>
+
+              <label class="option"><input type="checkbox" /> ไข่มุก</label>
+              <label class="option"><input type="checkbox" /> วิปครีม</label>
+              <label class="option"><input type="checkbox" /> ช็อกโกแลต</label>
+            </div>
+
+            <div class="form-group">
+              <label>เลือกขนม:</label>
+
+              <label class="option"
+                ><input type="radio" name="dessert" /> Matcha Cake</label
+              >
+              <label class="option"
+                ><input type="radio" name="dessert" /> Matcha Cheesecake</label
+              >
+              <label class="option"
+                ><input type="radio" name="dessert" /> Croissant</label
+              >
+              <label class="option"
+                ><input type="radio" name="dessert" /> ไม่รับ</label
+              >
+            </div>
+
+            <div class="form-group">
+              <label>วิธีชำระเงิน:</label>
+
+              <label class="option"
+                ><input type="radio" name="payment" /> เงินสด</label
+              >
+              <label class="option"
+                ><input type="radio" name="payment" /> โอนเงิน</label
+              >
+              <label class="option"
+                ><input type="radio" name="payment" /> บัตรเครดิต</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔽 เต็มแถว -->
+        <div class="form-group full">
+          <label>หมายเหตุเพิ่มเติม:</label>
+          <textarea rows="3"></textarea>
+        </div>
+
+        <button type="submit">สั่งเลย 🍵</button>
+      </form>
+    </div>
+  </body>
+</html>
