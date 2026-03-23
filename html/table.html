@@ -8,10 +8,16 @@
     <style>
       h1 {
         text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
-        margin-bottom: 25px; /* เว้นระยะด้านล่างของหัวข้อ */
+        margin: 0;
+        padding-top: 40px;
+        margin-bottom: 30px; /* เว้นระยะด้านล่างของหัวข้อ */
         letter-spacing: 1px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
       }
       body {
+        margin: 0;
+        min-height: 100vh; /* ความสูงขั้นต่ำของ bg  */
+        background: #171818;
+        /* background: linear-gradient(to bottom, #263a25, #21331f); การไล่สี จากบนลงล่าง */
         color: #ecebeb; /* กำหนดสีตัวอักษรทั้งหมดในหน้า */
         font-family: Arial, sans-serif; /* กำหนดฟอนต์ */
       }
@@ -20,15 +26,19 @@
         border-collapse: collapse; /* ทำให้เส้นตารางรวมกัน ไม่ซ้อนกัน */
         width: 80%; /* ความกว้างของตาราง */
         margin: 0 auto; /* ทำให้ตารางอยู่กลางหน้า */
-        margin-bottom: 40px; /* เว้นระยะด้านล่าง */
-        border-radius: 10px; /* ทำมุมโค้ง */
+        /* margin-bottom: 40px; เว้นระยะด้านล่าง */
+        border-radius: 15px; /* ทำมุมโค้ง */
         overflow: hidden; /* ตัดส่วนที่เกินออก (ใช้คู่กับมุมโค้ง) */
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้ตาราง */
       }
 
       th {
-        background-color: #29362d; /* สีพื้นหลังหัวตาราง */
+        background-color: #132222; /* สีพื้นหลังหัวตาราง */
         color: white; /* สีตัวอักษร */
+      }
+
+      td {
+        background-color: #1b1b1b; /* สีพื้นหลังตัวตาราง */
       }
 
       td,
@@ -37,13 +47,14 @@
         text-align: center; /* จัดข้อความกลาง */
         border: 1px solid #2c3e3e; /* เส้นขอบของช่อง */
       }
+
       tfoot td {
         border-top: 1px solid #2c3e3e; /* เส้นด้านบนของ footer */
         padding: 12px; /* เว้นช่องว่างด้านใน */
         text-align: center; /* จัดข้อความกลาง */
         font-style: italic; /* ตัวเอียง */
-        color: #9fd3b5; /* สีตัวอักษร */
-        background-color: #132222; /* สีพื้นหลัง */
+        color: #75a78a; /* สีตัวอักษร */
+        background-color: #16221c; /* สีพื้นหลัง */
       }
     </style>
   </head>
